@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>函数节流</title>
+</head>
+<body>
+<input type="text" name="search" id="search"/>
+<script>
+  function queryData(text){
+    console.log('搜索'+text);
+  }
+  var input = document.getElementById('search');
+  input.addEventListener('keyup', function(e){
+    queryData(this.value)
+  })
+</script>
+</body>
+</html>
