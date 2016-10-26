@@ -85,4 +85,38 @@ Number(undefined)   //NaN
 - toLocalString():返回对象的字符串形式，与区域有关，比如日期时间。
 - valueOf():返回对象的字符串，布尔值，数值的表示，一般和toString()返回的形式一样。
 
+### 操作符
+
+- 递增和递减操作符，在执行该操作之前都会将所要操作的变量默认转化为数值变量（Number()）,然后再进行操作。并且操作之后的变量类型为number;
+
+### width语句
+
+- 将代码的作用域设置到一个特定的对象中。
+
+<pre>
+var qs = location.search;
+var hostName = location.hostname;
+var url = location.href;
+
+//with改写
+with(location){
+    var qs = search;
+    var hostName = hostname;
+    var url = href;
+}
+</pre>
+
+> 严格模式下，不允许用with,否则视为语法错误。
+
+### 参数的理解
+
+- ECMAScript的函数不介意传进来多少个参数，就是说你在定义函数的时候定义的参数个数在2个，你可以传递1个或者3个都没关系。因为ECMAScript的参数是在内部是使用一个数组来表示的，函数始终接受到的是这个数组，并不会管数组中有哪些元素。
+- 在函数体内可以通过arguments来访问函数参数数组，获得传递给函数的每个参数。
+- arguments.length可以知道传递了多少个参数给函数。
+- arguments的值永远和命名参数保持一致。注：他们的内存空间不一样。
+- 在严格模式下重写arguments的值，会导致错误。
+- 活动对象在开始只包含一个变量，即arguments,arguments在全局环境是不存在的。
+
+
+
 
