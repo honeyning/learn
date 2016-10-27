@@ -1,0 +1,40 @@
+.test{
+    width : 100px;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.box1{
+    border: 1px solid red; /*为了测试方便*/
+   width: 60px;
+    height: 30px;
+    overflow: hidden;
+    zoom: 1;
+    margin-bottom: 20px;
+}
+.test_box1{
+    float: left;
+    height: 30px;
+    margin-right: 10px; /*建议和test_box2的宽度保持一致*/
+    overflow: hidden;
+}
+.test_box2{
+    float: right;
+    height: 31px; /*比父类height高一丢丢是为了可以被挤下来*/
+    margin-top: -30px;
+    width: 10px;
+}
+.box2{
+    margin-bottom: 10px;
+    width: 60px;
+    border: 1px solid red; /*为了测试方便*/
+}
+.box3 {
+    width: 60px;
+    height: 60px;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
