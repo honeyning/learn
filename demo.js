@@ -1,8 +1,8 @@
 /**
  * Created by hhm on 2016/10/11.
  */
-//function displayInfo(arg){
-//    var output = '';
+function displayInfo(arg){
+    var output = '';
 //    if (typeof arg.name == 'string'){
 //        output += 'name:'+arg.name+'\n';
 //    }
